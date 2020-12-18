@@ -10,7 +10,7 @@
 
 ### AbstractHollysysMircoFrontEndApp
 
- 抽象微前端所有应用，定义公共属性和抽象方法,所有微前端应用实现，需要基础该抽象类，并实现抽象方法
+ 抽象微前端所有应用，定义公共属性和抽象方法,所有微前端应用实现，需要继承该抽象类，并实现抽象方法
 
  ```js
 export abstract class AbstractHollysysMircoFrontEndApp {
@@ -49,3 +49,28 @@ export abstract class AbstractHollysysMircoFrontEndApp {
 }
  
  ```
+
+### HollysysMiApp
+
+ 微前端具体实现之一
+
+ ```js
+export class HollysysMiApp extends AbstractHollysysMircoFrontEndApp {
+    public beforeInstall() {
+        console.log(`miApp is preparing install`);
+    }
+
+    public install() {
+        let mountTo = this.getMountTo();
+        mountTo.innerHTML = "miApp is  installed";
+    }
+
+    public beforeUninstall() {
+        console.log(`miApp is  preparing uninstall`);
+    }
+
+    public uninstall() {
+        console.log(`miApp is  uninstalled`);
+    }
+}
+```
