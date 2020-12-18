@@ -1,0 +1,19 @@
+{
+  "name": "hollysysymircofrontenddraft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html",
+    "uml": "tsuml2 --glob ./src/**/*.ts "
+  },
+  "dependencies": {
+    "tsuml2": "0.2.0",
+    "typescript": "latest"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}
