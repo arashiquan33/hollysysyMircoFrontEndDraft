@@ -1,26 +1,9 @@
 import { AbstractHollysysMircoFrontEndApp } from "./AbHollysysMircoFrontEndApp";
-import { HollysysWorkOrderApp } from "./HollysysWorkOrderApp";
 
-type Appclass = new (
-    ...arg: any
-) => AbstractHollysysMircoFrontEndApp;
 
-//抽象定义应用注册时传递的参数
-interface AppConfig {
-    //实例化应用的名称
-    name: string;
-    //应用的路由前缀
-    pathPrefix: string;
-    //应用挂载的HTMLElement
-    mountTo: HTMLElement;
-    //应用对应的class
-    appClass: Appclass;
-}
+import {AppConfig,App} from './model'
 
-interface App extends AppConfig {
-    isRunning: boolean;
-    instance: AbstractHollysysMircoFrontEndApp;
-}
+
 
 export class HollysysAppManager {
     private appsConfig: AppConfig[] = [];
@@ -32,6 +15,14 @@ export class HollysysAppManager {
      */
     public registerApps(configs: AppConfig[]) {
         this.appsConfig = configs;
+    }
+
+
+    /**
+     * @description 获取应用配置
+     */
+    public getAppsConfig():AppConfig[]{
+         return this.appsConfig;
     }
 
     /**
