@@ -77,7 +77,7 @@ export class HollysysMiApp extends AbstractHollysysMircoFrontEndApp {
 
 ### HollysysAppManager
 
- 微前端应用管理类，负责管理微前端由生到死
+ 微前端应用管理类，使用工厂模式，负责管理微前端应用由生到死
 
  ```js
 export class HollysysAppManager {
@@ -158,3 +158,11 @@ export class HollysysAppManager {
     }
 }
 ```
+
+## 测试运行
+
+> 1.npm install
+> 2.npm start
+> 3.打开浏览器http://localhost:1234
+> 4.更换url为http://localhost:1234/#/mi ,查看控制台与页面输出
+> 4.更换url为http://localhost:1234/#/workOrder ,查看控制台与页面输出
