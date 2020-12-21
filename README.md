@@ -161,8 +161,12 @@ export class HollysysAppManager {
 
 ## 测试运行
 
-> 1.npm install
-> 2.npm start
-> 3.打开浏览器http://localhost:1234
-> 4.更换url为http://localhost:1234/#/mi ,查看控制台与页面输出
-> 4.更换url为http://localhost:1234/#/workOrder ,查看控制台与页面输出
+1.npm install
+
+2.npm start
+
+3.打开浏览器http://localhost:1234
+
+4.手动更改url为http://localhost:1234/#/mi ,查看控制台与页面输出
+
+5.手动更改url为http://localhost:1234/#/workOrder ,查看控制台与页面输出
