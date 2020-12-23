@@ -1,6 +1,10 @@
 # hollysysyMircoFrontEndDraft
 
-微前端架构雏形，使用最简单的模式来理解微前端
+微前端架构雏形，使用最简单的模式来理解微前端。
+
+抽象微前端概念中的微应用，每一个微应用继承抽象类并实现多态的效果
+
+
 
 ## 时序图
 
@@ -170,3 +174,11 @@ export class HollysysAppManager {
 4.手动更改url为http://localhost:1234/#/mi ,查看控制台与页面输出
 
 5.手动更改url为http://localhost:1234/#/workOrder ,查看控制台与页面输出
+
+## 弊端
+
+本雏形只是为了通过示例来简单介绍微前端中基座与各个微应用是如何串联的，基座类似于工厂模式的工厂，而微应用类似于产品。
+
+真正的微前端架构中，基座与每一个微应用一定是分开开发，也就是独立repositor,独立develop、独立deploy，这部分可以转战至以下链接：
+
+https://www.npmjs.com/package/@hollysys-mirco-front-end/core
